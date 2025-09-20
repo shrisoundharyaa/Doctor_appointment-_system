@@ -12,6 +12,11 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/admin", require("./src/routes/adminRoutes"));
+app.use("/api/patient", require("./src/routes/patientRoutes"));
+app.use("/api/doctor", require("./src/routes/doctorRoutes"));
+app.use("/api/hospital", require("./src/routes/hospitalRoutes"));
+app.use("/api/booking", require("./src/routes/bookingRoutes"));
+
 
 app.get("/", (req, res) => {
   res.send("MongoDB connection is working!");
